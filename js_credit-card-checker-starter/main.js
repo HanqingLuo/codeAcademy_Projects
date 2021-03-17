@@ -95,16 +95,13 @@ function idInvalidCardCompanies(nestedArray){
 
 }
 
-// console.log(isInCompanies(['Visa', 'Amex'], 'Visa'))
-// console.log(isInCompanies(['Visa', 'Amex'], 'Discover'))
 
-// console.log(validateCred([4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8]))
-// console.log(validateCred([3, 7, 1, 6, 1, 2, 0, 1, 9, 9, 8, 5, 2, 3, 6]))
-// console.log(validateCred(valid1))
-// console.log(validateCred(valid2))
-// console.log(validateCred(valid3))
-// console.log(validateCred(valid4))
-// console.log(validateCred(valid5))
+
+// console.log(validateCred(valid1))    //output: true
+// console.log(validateCred(valid2))    //output: true
+// console.log(validateCred(valid3))    //output: true
+// console.log(validateCred(valid4))    //output: true
+// console.log(validateCred(valid5))    //output: true
 // console.log(validateCred(invalid1))
 // console.log(validateCred(invalid2))
 // console.log(validateCred(invalid3))
