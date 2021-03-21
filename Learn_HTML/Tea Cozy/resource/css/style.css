@@ -1,0 +1,10 @@
+html {
+    background-color: black;
+    font-family: Helvetica;
+    font-size: 22px;
+    opacity: 0.9;
+}
+
+nav a{
+    text-align: right;
+}
