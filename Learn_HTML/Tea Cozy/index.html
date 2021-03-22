@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tea Cozy</title>
     <meta name="description" content="The HTML5 Herald" />
     <meta name="HanqingLuo" content="SitePoint" />
@@ -12,34 +12,117 @@
   </head>
 
   <body>
-    
     <header>
       <img
         src="https://content.codecademy.com/courses/freelance-1/unit-4/img-tea-cozy-logo.png"
-        alt="logo error"
-        id="logo"
+        alt="Tea Cozy Logo"
       />
       <!-- Logo -->
       <nav class="desktop">
         <ul>
-          <li><a href="#">Mission</a></li>
-          <li><a href="#">Featured Tea</a></li>
-          <li><a href="#">Locations</a></li>
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#feature">Featured Tea</a></li>
+          <li><a href="#locations">Locations</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
+      <!-- Banner Section -->
       <img
         src="https://content.codecademy.com/courses/freelance-1/unit-4/img-mission-background.jpg"
         alt="banner error"
         id="banner"
       />
-      
 
+      <!-- Mission Section-->
+      <section class="mission">
+        <h2>Our Mission</h2>
+        <h4>
+          Handpicked, Artisanally Curated, Free Range, Sustainable, Small Batch,
+          Fair Trade, Organic Tea
+        </h4>
+      </section>
+
+      <!-- Feature Tea Section-->
+      <section class="feature">
+        <h2>Tea of The Month</h2>
+        <h4>What's Steeping at The Tea Cozy</h4>
+      </section>
+
+      <figure>
+        <img
+          src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-berryblitz.jpg"
+          alt="A cup of tea with berrys in it."
+        />
+        <figcaption>Fall Berry Blitz Tea</figcaption>
+        <img
+          src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-spiced-rum.jpg"
+          alt="A box of spiced rum tea which says 'It pays to buy good tea'."
+        />
+        <figcaption>Spiced Rum Tea</figcaption>
+        <img
+          src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-donut.jpg"
+          alt="A donut with sugar on it."
+        />
+        <figcaption>Seasonal Donuts</figcaption>
+        <img
+          src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-myrtle-ave.jpg"
+          alt="A cup of myrtle tea viewed fom above"
+        />
+        <figcaption>Myrtle Ave Tea</figcaption>
+        <img
+          src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-bedford-bizarre.jpg"
+          alt="A cup of tea with a pot of sugar at its left"
+        />
+        <figcaption>Bedford Bizzarre Tea</figcaption>
+      </figure>
+
+      <!-- Location Section-->
+      <section class="locations">
+        <div class="location_header">
+          <h2>Locations</h2>
+        </div>
+        <div class="locations_container">
+          <div class="address" id="Downtown">
+            <h3>Downtown</h3>
+            <p>384 West 4th St</p>
+            <p>Suite 108</p>
+            <p>Portland, Maine</p>
+          </div>
+          <div class="address" id="EastBayside">
+            <h3>East Bayside</h3>
+            <p>3433 Phisherman's Avenue</p>
+            <p>Northwest Corner</p>
+            <p>Portland, Maine</p>
+          </div>
+          <div class="address" id="Oakdale">
+            <h3>Oakdale</h3>
+            <p>515 Crescent Avenue</p>
+            <p>Second Floor</p>
+            <p>Portland, Maine</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact">
+        <div class="contact_header">
+          <h2>The Tea Cozy</h2>
+        </div>
+        <div class="contact_container">
+          <h5>contact@theteacozy.com</h5>
+          <h5>917-555-8904</h5>
+        </div>
+      </section>
     </main>
 
-    <footer></footer>
-    <script src="js/scripts.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer_container">
+        <p>copyright The Tea Cozy 2017</p>
+      </div>
+    </footer>
+    <!-- <script src="js/scripts.js"></script> -->
   </body>
 </html>
