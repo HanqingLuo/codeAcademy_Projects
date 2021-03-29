@@ -23,21 +23,21 @@ const getVenues = async () => {
     try {
         const response = await fetch(urlToFetch);
         if (response.ok) {
-          const jsonResponse = await response.json();
-          const venues = jsonResponse.response.groups[0].items.map(item => item.venue);
-          console.log(venues);
-          return venues;
+            const jsonResponse = await response.json();
+            const venues = jsonResponse.response.groups[0].items.map(item => item.venue);
+            console.log(venues);
+            return venues;
         }
-      } catch (error) {
+    } catch (error) {
         console.log('getVenues Error');
     }
 }
 
 const getForecast = async () => {
     const urlToFetch = `${weatherUrl}?&q=${$input.val()}&APPID=${openWeatherKey}`;
-    try{
+    try {
         const response = await fetch(urlToFetch);
-        if (response.ok){
+        if (response.ok) {
             const jsonResponse = await response.json();
             console.log(jsonResponse);
             return jsonResponse;
@@ -52,8 +52,10 @@ const getForecast = async () => {
 const renderVenues = (venues) => {
     $venueDivs.forEach(($venue, index) => {
         // Add your code here:
-
-        let venueContent = '';
+        const venue = venues[index];
+        const venueIcon = venue.categories[0].icon;
+        const venueImgSrc = `${venueIcon.prefix}bg_64${venueIcon.suffix}`;
+        let venueContent = createVenueHTML(venue.name, venue.location, venueImgSrc);
         $venue.append(venueContent);
     });
     $destination.append(`<h2>${venues[0].location.city}</h2>`);
@@ -71,7 +73,7 @@ const executeSearch = () => {
     $weatherDiv.empty();
     $destination.empty();
     $container.css("visibility", "visible");
-    getVenues()
+    getVenues().then((venues) => {return renderVenues(venues)});
     getForecast()
     return false;
 }
