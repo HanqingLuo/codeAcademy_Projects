@@ -1,0 +1,1 @@
+console.log(myField1.generateDefaultHat());
