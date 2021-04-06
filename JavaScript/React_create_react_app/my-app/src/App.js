@@ -1,13 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>Hello world</code> and save to reload.
+        </p>
+        <p>
+          {props.name}{props.age}
         </p>
         <a
           className="App-link"
