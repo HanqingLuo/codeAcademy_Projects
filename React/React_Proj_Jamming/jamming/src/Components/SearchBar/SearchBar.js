@@ -4,7 +4,7 @@ import './SearchBar.css';
 class SearchBar extends React.Component {
 
     search(){
-        this.props.onSearch = {};
+        this.props.onSearch(this.state.term);
     }
 
     render() {
