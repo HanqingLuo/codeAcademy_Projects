@@ -17,6 +17,7 @@ class App extends React.Component {
       playlistTracks: [{name: 'name1', artist:'artist1', album:'album1',id:1}]
     }
     this.addTrack = this.addTrack.bind(this);
+    this.removeTrack = this.removeTrack.bind(this);
   }
 
   addTrack(track){
