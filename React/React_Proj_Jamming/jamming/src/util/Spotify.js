@@ -1,4 +1,4 @@
-let accessToken = ""
+let accessToken;
 
 let clientID = 'afe252d15fd34964a23507f8722b1b76';
 let redirectUri = "http://localhost:3000/";
@@ -28,12 +28,11 @@ const Spotify = {
 
     search(term) {
         const accessToken = Spotify.getAccessToken();
-        return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`,
-            {
-                headers: { Authorization: `Bearer ${accessToken}` }
-
+        return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`, {
+            headers: {
+                Authorization: `Bearer ${accessToken}`
             }
-        ).then(response => {
+        }).then(response => {
             return response.json();
         }).then(jsonResponse => {
             if (!jsonResponse.tracks) {
@@ -41,7 +40,7 @@ const Spotify = {
             }
             return jsonResponse.tracks.items.map(track => ({
                 id: track.id,
-                namee: track.name,
+                name: track.name,
                 artist: track.artists[0].name,
                 album: track.album.name,
                 uri: track.uri
@@ -66,12 +65,12 @@ const Spotify = {
                     meethod: 'POST',
                     body: JSON.stringify({ name: name })
                 }).then(response => response.json()
-                ).then(jsonResponse =>{
+                ).then(jsonResponse => {
                     const playlistId = jsonResponse.id;
-                    return fetch(`/v1/users/${userId}/playlists/${playlistId}/tracks`,{
+                    return fetch(`/v1/users/${userId}/playlists/${playlistId}/tracks`, {
                         headers: headers,
                         method: 'POST',
-                        body: JSON.stringify({uris:trackUris})
+                        body: JSON.stringify({ uris: trackUris })
                     })
                 })
         })
