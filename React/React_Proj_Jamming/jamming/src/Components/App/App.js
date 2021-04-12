@@ -52,7 +52,7 @@ class App extends React.Component {
 
   search(term){
     Spotify.search(term).then(SearchResults => {
-      this.setState({SearchResults: SearchResults})
+      this.setState({SearchResults: SearchResults});
     });
   }
 
